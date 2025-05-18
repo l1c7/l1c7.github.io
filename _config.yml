@@ -95,7 +95,7 @@ theme_mode: dark
 cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar: artworks-A5SwtChDvvTIxMlq-FRzgXg-t1080x1080.jpg
+avatar: 56a14b93f1f169aa172b931-1723070166576.png
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
@@ -147,7 +147,7 @@ pwa:
 paginate: 10
 
 # The base URL of your site
-baseurl: ""
+baseurl: "https://d3r3lict.github.io"
 
 # ------------ The following options are not recommended to be modified ------------------
 
