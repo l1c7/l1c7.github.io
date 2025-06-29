@@ -19,7 +19,7 @@ We can make an account here, let's proceed with that. When we visit the `/profil
 
 Let's change the `userId` parameter to `1` and see if we can get the `admin`'s data:
 
-![[Pasted image 20250629182811.png]]
+![20250629182811.png](20250629182811.png)
 
 It worked! I saved the output we got and tried to send the introspection query.
 Here's the request body I sent to `/graphql` endpoint:
@@ -29,7 +29,7 @@ Here's the request body I sent to `/graphql` endpoint:
 
 I noticed this interesting mutation, seems like we can reset the `admin`'s password:
 
-![[Pasted image 20250629183152.png]]
+![20250629183152.png](20250629183152.png)
 
 I used the following `curl` command to proceed:
 ```
@@ -55,11 +55,11 @@ Then, using the token I got I reset the admin's password:
 
 It worked, I was able to login as admin but it asked for an OTP:
 
-![[Pasted image 20250629183832.png]]
+![20250629183832.png](20250629183832.png)
 
 I clicked resend OTP hoping it will be exposed somewhere, but it just exposed a token:
 
-![[Pasted image 20250629184139.png]]
+![20250629184139.png](20250629184139.png)
 
 I've decided to `bruteforce` the OTP using `graphql aliases`. I vibe coded a tool again, made small changes, grabbed the token and ran it hoping it will work, and BOOM!
 
@@ -102,4 +102,4 @@ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTc1MTIwODI4NSwiZXh
 
 I signed into my own account and switched tokens in `Local Storage` from mine to the hacked one. I refreshed the page using `CTRL+SHIFT+R` and noticed that I am logged in as `admin@speednet.htb`. I just navigated to the `Billing` tab, scrolled the page down and grabbed the flag!
 
-![[Pasted image 20250629184844.png]]
+![20250629184844.png](20250629184844.png)
