@@ -15,7 +15,7 @@ Email Site: `http://IP:PORT/emails/` Email Address: test@email.htb
 
 We can make an account here, let's proceed with that. When we visit the `/profile` endpoint, the browser sends the following request to load our data:
 
-![[Pasted image 20250629182719.png]]
+![Pasted image 20250629182719.png](Pasted image 20250629182719.png)
 
 Let's change the `userId` parameter to `1` and see if we can get the `admin`'s data:
 
